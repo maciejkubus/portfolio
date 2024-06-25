@@ -1,4 +1,5 @@
 import { Nav } from "@/components/Nav";
+import { ServiceTile } from "@/components/ServiceTile";
 import Image from "next/image";
 
 export default function Home() {
@@ -23,6 +24,20 @@ export default function Home() {
         <div className="w-1/2"> 
           <Image src="computer.svg" alt="computer" width={591} height={451}></Image>
         </div>
+      </div>
+      <div className="px-16 py-32 w-full flex gap-8">
+        <ServiceTile
+          title="Strony internetowe"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque."
+        ></ServiceTile>
+        <ServiceTile
+          title="E-commerce"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque."
+        ></ServiceTile>
+        <ServiceTile
+          title="Web Development"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque."
+        ></ServiceTile>
       </div>
     </main>
   );

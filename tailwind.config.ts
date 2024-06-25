@@ -18,6 +18,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      boxShadow: {
+        'shadow': "0px 6px 0px 0px #000000"
+      }
     },
   },
   plugins: [flowbite.plugin()],
