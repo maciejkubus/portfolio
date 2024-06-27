@@ -40,8 +40,8 @@ export default function Home() {
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque."
         ></ServiceTile>
       </div>
-      <div className="px-16 py-32 w-full flex gap-8 font-bold text-6xl">Kilka naszych projektów</div>
-      <div className="px-16 py-32 w-full grid grid-cols-2 gap-8">
+      <div className="px-16 w-full flex gap-8 font-bold text-6xl">Kilka naszych projektów</div>
+      <div className="px-16 pt-8 pb-32 w-full grid grid-cols-2 gap-8">
         <ProjectTile 
           title="Projekt #1"
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque"
