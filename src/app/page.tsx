@@ -1,4 +1,5 @@
 import { Nav } from "@/components/Nav";
+import PersonTile from "@/components/PersonTile";
 import ProjectTile from "@/components/ProjectTile";
 import { ServiceTile } from "@/components/ServiceTile";
 import Image from "next/image";
@@ -61,6 +62,21 @@ export default function Home() {
       </div>
       <div className="flex justify-center pb-16">
         <button className="bg-primary rounded-xl font-bold px-8 py-4 text-white text-2xl">Zobacz wszystkie projekty</button>
+      </div>
+      <div className="px-16 w-full flex gap-8 font-bold text-6xl">Nasz wyjątkowy zespół</div>
+      <div className="px-16 pb-32 pt-8 w-full flex gap-7 my-7">
+        <PersonTile
+          title="Astoria Bublas"
+          text="Lorem ipsum dolor sit amet facere et consectetur adipisicing elit. Quisis cupiditate facere seq exercitationem.">
+        </PersonTile>
+        <PersonTile
+          title="Maciej Kubus"
+          text="Lorem ipsum dolor sit amet facere et consectetur adipisicing elit. Quisis cupiditate facere seq exercitationem.">
+        </PersonTile>
+        <PersonTile
+          title="Julia Dmytrenko"
+          text="Lorem ipsum dolor sit amet facere et consectetur adipisicing elit. Quisis cupiditate facere seq exercitationem.">
+        </PersonTile>
       </div>
     </main>
   );
