@@ -1,3 +1,4 @@
+import ArticleTile from "@/components/ArticleTile";
 import { Nav } from "@/components/Nav";
 import PersonTile from "@/components/PersonTile";
 import ProjectTile from "@/components/ProjectTile";
@@ -77,6 +78,20 @@ export default function Home() {
           title="Julia Dmytrenko"
           text="Lorem ipsum dolor sit amet facere et consectetur adipisicing elit. Quisis cupiditate facere seq exercitationem.">
         </PersonTile>
+      </div>
+      <div className="px-16 w-full flex gap-8 font-bold text-6xl">Aktualności</div>
+      <div className="px-16 pt-8 pb-32 w-full grid grid-cols-2 gap-8">
+        <ArticleTile 
+          title="Artykuł #1"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque"
+        ></ArticleTile>
+        <ArticleTile 
+          title="Artykuł #2"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque"
+        ></ArticleTile>
+      </div>
+      <div className="flex justify-center pb-16">
+        <button className="bg-primary rounded-xl font-bold px-8 py-4 text-white text-2xl">Przejdź do naszego bloga</button>
       </div>
     </main>
   );
