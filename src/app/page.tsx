@@ -1,4 +1,5 @@
 import { Nav } from "@/components/Nav";
+import ProjectTile from "@/components/ProjectTile";
 import { ServiceTile } from "@/components/ServiceTile";
 import Image from "next/image";
 
@@ -38,6 +39,28 @@ export default function Home() {
           title="Web Development"
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque."
         ></ServiceTile>
+      </div>
+      <div className="px-16 py-32 w-full flex gap-8 font-bold text-6xl">Kilka naszych projektów</div>
+      <div className="px-16 py-32 w-full grid grid-cols-2 gap-8">
+        <ProjectTile 
+          title="Projekt #1"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque"
+        ></ProjectTile>
+        <ProjectTile 
+          title="Projekt #2"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque"
+        ></ProjectTile>
+        <ProjectTile 
+          title="Projekt #3"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque"
+        ></ProjectTile>
+        <ProjectTile 
+          title="Projekt #4"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque"
+        ></ProjectTile>
+      </div>
+      <div className="flex justify-center pb-16">
+        <button className="bg-primary rounded-xl font-bold px-8 py-4 text-white text-2xl">Zobacz wszystkie projekty</button>
       </div>
     </main>
   );
