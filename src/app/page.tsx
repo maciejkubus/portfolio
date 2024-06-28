@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
-      <div className="px-16 py-32 w-full flex gap-8">
+    <main className="container mx-auto px-2 md:px-8 xl:px-12">
+      <div className="py-32 w-full flex gap-8">
         <div className="w-1/2">
           <h1 className="font-bold text-6xl leading-normal">
             Zbudujemy razem<br /> 
@@ -26,7 +26,7 @@ export default function Home() {
           <Image src="computer.svg" alt="computer" width={591} height={451}></Image>
         </div>
       </div>
-      <div className="px-16 py-32 w-full flex gap-8">
+      <div className="py-32 w-full flex gap-8">
         <ServiceTile
           title="Strony internetowe"
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque."
@@ -40,8 +40,8 @@ export default function Home() {
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque."
         ></ServiceTile>
       </div>
-      <div className="px-16 w-full flex gap-8 font-bold text-6xl">Kilka naszych projektów</div>
-      <div className="px-16 pt-8 pb-32 w-full grid grid-cols-2 gap-8">
+      <div className="w-full flex gap-8 font-bold text-6xl">Kilka naszych projektów</div>
+      <div className="pt-8 pb-32 w-full grid grid-cols-2 gap-8">
         <ProjectTile 
           title="Projekt #1"
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque"
@@ -62,8 +62,8 @@ export default function Home() {
       <div className="flex justify-center pb-16">
         <button className="bg-primary rounded-xl font-bold px-8 py-4 text-white text-2xl">Zobacz wszystkie projekty</button>
       </div>
-      <div className="px-16 w-full flex gap-8 font-bold text-6xl">Nasz wyjątkowy zespół</div>
-      <div className="px-16 pb-32 pt-8 w-full flex gap-7 my-7">
+      <div className="w-full flex gap-8 font-bold text-6xl">Nasz wyjątkowy zespół</div>
+      <div className="pb-32 pt-8 w-full flex gap-7 my-7">
         <PersonTile
           title="Astoria Bublas"
           text="Lorem ipsum dolor sit amet facere et consectetur adipisicing elit. Quisis cupiditate facere seq exercitationem.">
@@ -77,8 +77,8 @@ export default function Home() {
           text="Lorem ipsum dolor sit amet facere et consectetur adipisicing elit. Quisis cupiditate facere seq exercitationem.">
         </PersonTile>
       </div>
-      <div className="px-16 w-full flex gap-8 font-bold text-6xl">Aktualności</div>
-      <div className="px-16 pt-8 pb-32 w-full grid grid-cols-2 gap-8">
+      <div className="w-full flex gap-8 font-bold text-6xl">Aktualności</div>
+      <div className="pt-8 pb-32 w-full grid grid-cols-2 gap-8">
         <ArticleTile 
           title="Artykuł #1"
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque"
