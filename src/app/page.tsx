@@ -1,5 +1,4 @@
 import ArticleTile from "@/components/ArticleTile";
-import { Nav } from "@/components/Nav";
 import PersonTile from "@/components/PersonTile";
 import ProjectTile from "@/components/ProjectTile";
 import { ServiceTile } from "@/components/ServiceTile";
@@ -8,7 +7,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <Nav />
       <div className="px-16 py-32 w-full flex gap-8">
         <div className="w-1/2">
           <h1 className="font-bold text-6xl leading-normal">
