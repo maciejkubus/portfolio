@@ -1,6 +1,6 @@
 export function Footer() {
 	return (
-		<footer className="container mx-auto px-2 md:px-8 xl:px-12">
+		<footer className="container mx-auto px-2 md:px-8 xl:px-12 mb-16">
 			<div className="w-full p-8 bg-black text-white rounded-3xl space-y-8">
 				<div className="flex flex-col lg:flex-row gap-8">
 					<div className="w-full space-y-8">
