@@ -7,7 +7,10 @@ import type { CustomFlowbiteTheme } from "flowbite-react";
 
 const customTheme: CustomFlowbiteTheme["navbar"] = {
   collapse: {
-    list: "mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium items-center",
+    list: "mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium items-stretch md:items-center ",
+  },
+  link: {
+    base: "flex justify-center md:block py-2 pl-3 pr-4 md:p-0",
   },
 };
 
