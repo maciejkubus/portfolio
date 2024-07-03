@@ -21,13 +21,25 @@ export function Nav() {
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <Navbar.Link href="#">Services</Navbar.Link>
-        <Navbar.Link href="#">Pricing</Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
-        <Navbar.Link href="#">
-          <Button color="light" pill>
-            Light
-          </Button>
+        <Navbar.Link as={Link} href="#">
+          Strona Główna
+        </Navbar.Link>
+        <Navbar.Link as={Link} href="/portfolio">
+          Nasze Portfolio
+        </Navbar.Link>
+        <Navbar.Link as={Link} href="/team">
+          Nasz Zespół
+        </Navbar.Link>
+        <Navbar.Link as={Link} href="/blog">
+          Blog
+        </Navbar.Link>
+        <Navbar.Link as={Link} href="/contact">
+          Kontakt
+        </Navbar.Link>
+        <Navbar.Link as={Link} href="/pricing">
+          <button className="border-black border-2 rounded-xl px-6 py-3 font-bold">
+            Bezpłatna wycena
+          </button>
         </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
