@@ -1,12 +1,13 @@
 import React from "react";
 import { CiLinkedin } from "react-icons/ci";
+import ContactForm from "./ContactForm";
 
 const ContactUsSection = () => {
   return (
     <div>
       <div className="pt-8 pb-32 w-full grid grid-cols-2 gap-8">
         <div>
-          <h3 className="w-full flex gap-8 font-bold text-6xl mb-8">
+          <h3 className="w-full flex gap-8 font-bold text-6xl mt-6 mb-8">
             Odezwij się do nas
           </h3>
           <p>
@@ -27,7 +28,9 @@ const ContactUsSection = () => {
             </div>
           </div>
         </div>
-        <div>formularz</div>
+        <div>
+          <ContactForm />
+        </div>
       </div>
     </div>
   );
