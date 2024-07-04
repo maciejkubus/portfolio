@@ -7,7 +7,7 @@ const ContactUsSection = () => {
         <div>
             <div className="grid w-full grid-cols-2 gap-8 pb-32 pt-8">
                 <div>
-                    <h3 className="mb-8 mt-6 flex w-full gap-8 text-6xl font-bold">
+                    <h3 className="mb-8 flex w-full gap-8 text-6xl font-bold">
                         Odezwij się do nas
                     </h3>
                     <p>
