@@ -2,7 +2,8 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import React from "react";
-import { Button, Checkbox, Label, TextInput, Textarea } from "flowbite-react";
+import { Alert, Checkbox, Label, TextInput, Textarea } from "flowbite-react";
+import { FaArrowCircleUp } from "react-icons/fa";
 
 const ContactForm = () => {
   const {
@@ -33,7 +34,7 @@ const ContactForm = () => {
   const onSubmit = async (data: any) => {
     // FIX any
     // Destrcture data object
-    const { name, email, subject, message } = data;
+    const { name, email, message, consent } = data;
     try {
       // Disable form while processing submission
       setDisabled(true);
@@ -42,8 +43,8 @@ const ContactForm = () => {
       const templateParams = {
         name,
         email,
-        subject,
         message,
+        consent,
       };
 
       // Use emailjs to email contact form data
@@ -59,7 +60,7 @@ const ContactForm = () => {
     } catch (e) {
       console.error(e);
       // Display error alert
-      toggleAlert("Uh oh. Something went wrong.", "danger");
+      toggleAlert("Uh oh. Something went wrong.", "failure");
     } finally {
       // Re-enable form submission
       setDisabled(false);
@@ -73,7 +74,12 @@ const ContactForm = () => {
       <h2 className="font-bold text-3xl my-4">Skontaktuj się z nami</h2>
       <div className="ContactForm">
         <div className="">
-          <form className="flex flex-col gap-4">
+          <form
+            className="flex flex-col gap-4"
+            id="contact-form"
+            onSubmit={handleSubmit(onSubmit)}
+            noValidate
+          >
             <div>
               <div className="mb-2 block">
                 <Label htmlFor="name" value="Imię i nazwisko" />
@@ -83,6 +89,24 @@ const ContactForm = () => {
                 type="text"
                 placeholder="John Doe"
                 required
+                {...register("name", {
+                  required: {
+                    value: true,
+                    message: "Please enter your name",
+                  },
+                  maxLength: {
+                    value: 30,
+                    message: "Please use 30 characters or less",
+                  },
+                })}
+                color={errors.name ? "failure" : ""}
+                helperText={
+                  errors.name && (
+                    <span className="errorMessage">
+                      {errors.name.message?.toString()}
+                    </span>
+                  )
+                }
               />
             </div>
             <div>
@@ -96,20 +120,22 @@ const ContactForm = () => {
                     type="email"
                     placeholder="example@mail.com"
                     required
+                    {...register("email", {
+                      required: true,
+                      pattern:
+                        /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                    })}
+                    color={errors.email ? "failure" : ""}
+                    helperText={
+                      errors.email && (
+                        <span className="errorMessage">
+                          Please enter a valid email address
+                        </span>
+                      )
+                    }
                   />
                 </div>
-                <div>
-                  {/* telefon */}
-                  {/* <div className="mb-2 block">
-                    <Label htmlFor="email1" value="E-mail" />
-                  </div>
-                  <TextInput
-                    id="email1"
-                    type="email"
-                    placeholder="example@mail.com"
-                    required
-                  /> */}
-                </div>
+                <div>{/* telefon */}</div>
               </div>
             </div>
             <div>
@@ -121,39 +147,58 @@ const ContactForm = () => {
                 placeholder="Some text..."
                 required
                 rows={4}
+                {...register("message", {
+                  required: true,
+                })}
+                color={errors.message ? "failure" : ""}
+                helperText={
+                  errors.message && (
+                    <span className="errorMessage">Please enter a message</span>
+                  )
+                }
               />
             </div>
             <div className="flex items-center gap-2">
-              <Checkbox id="consent" />
+              <Checkbox
+                id="consent"
+                {...register("consent", {
+                  required: {
+                    value: true,
+                    message: "Please tick the checkbox",
+                  },
+                })}
+              />
               <Label htmlFor="consent">
                 Wyrażam zgodę na przetwarzanie danych osobowych bla bla bla
               </Label>
             </div>
+            {errors.consent && (
+              <p className="block text-sm text-red-600 dark:text-red-500">
+                <FaArrowCircleUp className="inline mr-1 h-4 w-4" />
+                <span>Please tick the checkbox</span>
+              </p>
+            )}
 
-            <button className="bg-primary rounded-xl font-bold px-6 py-3 text-white self-end">
+            <button
+              className="bg-primary rounded-xl font-bold px-6 py-3 text-white self-end"
+              disabled={disabled}
+            >
               Wyślij
             </button>
           </form>
         </div>
 
-        {/* zamienic to na flowbite alerts */}
-        {/* {alertInfo.display && (
-          <div
-            className={`alert alert-${alertInfo.type} alert-dismissible mt-5`}
-            role="alert"
+        {alertInfo.display && (
+          <Alert
+            color={alertInfo.type}
+            className="fixed top-0 left-0"
+            onDismiss={() =>
+              setAlertInfo({ display: false, message: "", type: "" })
+            } // Clear the alert when close button is clicked
           >
             {alertInfo.message}
-            <button
-              type="button"
-              className="btn-close"
-              data-bs-dismiss="alert"
-              aria-label="Close"
-              onClick={() =>
-                setAlertInfo({ display: false, message: "", type: "" })
-              } // Clear the alert when close button is clicked
-            ></button>
-          </div>
-        )} */}
+          </Alert>
+        )}
       </div>
     </div>
   );
