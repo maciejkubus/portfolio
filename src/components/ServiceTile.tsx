@@ -1,18 +1,14 @@
 export function ServiceTile({
-    title, 
-    text
+    title,
+    text,
 }: Readonly<{
-    title: string,
+    title: string
     text: string
 }>) {
     return (
-        <div className="p-6 border-2 border-black rounded-3xl shadow-shadow">
-            <h2 className="font-bold text-2xl mb-3">
-                {title}
-            </h2>
-            <div className="text-lg">
-                {text}
-            </div>
+        <div className="rounded-3xl border-2 border-black p-6 shadow-shadow">
+            <h2 className="mb-3 text-2xl font-bold">{title}</h2>
+            <div className="text-lg">{text}</div>
         </div>
     )
 }

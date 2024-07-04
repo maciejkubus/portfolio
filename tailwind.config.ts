@@ -1,28 +1,28 @@
-import type { Config } from "tailwindcss";
-const flowbite = require("flowbite-react/tailwind");
+import type { Config } from 'tailwindcss'
+const flowbite = require('flowbite-react/tailwind')
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    flowbite.content(),
-  ],
-  theme: {
-    extend: {
-      colors: {
-        primary: "#AF47D2"
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-      boxShadow: {
-        'shadow': "0px 6px 0px 0px #000000"
-      }
+    content: [
+        './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+        flowbite.content(),
+    ],
+    theme: {
+        extend: {
+            colors: {
+                primary: '#AF47D2',
+            },
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                'gradient-conic':
+                    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+            },
+            boxShadow: {
+                shadow: '0px 6px 0px 0px #000000',
+            },
+        },
     },
-  },
-  plugins: [flowbite.plugin()],
-};
-export default config;
+    plugins: [flowbite.plugin()],
+}
+export default config
