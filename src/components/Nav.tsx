@@ -24,7 +24,7 @@ export function Nav() {
             </Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse>
-                <Navbar.Link as={Link} href="#">
+                <Navbar.Link as={Link} href="/">
                     Strona Główna
                 </Navbar.Link>
                 <Navbar.Link as={Link} href="/portfolio">
