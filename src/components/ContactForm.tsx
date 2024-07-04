@@ -34,7 +34,7 @@ const ContactForm = () => {
     const onSubmit = async (data: any) => {
         // FIX any
         // Destrcture data object
-        const { name, email, message, consent } = data
+        const { name, email, phone, message, consent } = data
         try {
             // Disable form while processing submission
             setDisabled(true)
@@ -43,6 +43,7 @@ const ContactForm = () => {
             const templateParams = {
                 name,
                 email,
+                phone,
                 message,
                 consent,
             }
@@ -140,7 +141,32 @@ const ContactForm = () => {
                                         }
                                     />
                                 </div>
-                                <div>{/* telefon */}</div>
+                                <div>
+                                    <div className="mb-2 block">
+                                        <Label
+                                            htmlFor="telefon"
+                                            value="Telefon"
+                                        />
+                                    </div>
+                                    <TextInput
+                                        id="phone"
+                                        type="tel"
+                                        placeholder="123 456 789"
+                                        required
+                                        {...register('phone', {
+                                            required: true,
+                                        })}
+                                        color={errors.phone ? 'failure' : ''}
+                                        helperText={
+                                            errors.phone && (
+                                                <span className="errorMessage">
+                                                    Please enter a valid phone
+                                                    number
+                                                </span>
+                                            )
+                                        }
+                                    />
+                                </div>
                             </div>
                         </div>
                         <div>
