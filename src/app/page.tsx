@@ -8,9 +8,9 @@ import Image from 'next/image'
 export default function Home() {
     return (
         <main className="container mx-auto px-2 md:px-8 xl:px-12">
-            <div className="flex w-full gap-8 py-32">
-                <div className="w-1/2">
-                    <h1 className="text-6xl font-bold leading-normal">
+            <div className="flex w-full gap-8 py-16 md:py-32 flex-col md:flex-row">
+                <div className="w-full md:w-1/2">
+                    <h1 className="text-3xl md:text-6xl font-bold leading-normal">
                         Zbudujemy razem
                         <br />
                         twoje miejsce
@@ -31,7 +31,7 @@ export default function Home() {
                         </button>
                     </div>
                 </div>
-                <div className="w-1/2">
+                <div className="hidden md:flex w-full md:w-1/2">
                     <Image
                         src="computer.svg"
                         alt="computer"
@@ -40,7 +40,7 @@ export default function Home() {
                     ></Image>
                 </div>
             </div>
-            <div className="flex w-full gap-8 py-32">
+            <div className="flex flex-col md:flex-row w-full gap-8 py-32">
                 <ServiceTile
                     title="Strony internetowe"
                     text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque."
