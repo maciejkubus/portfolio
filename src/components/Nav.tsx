@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { Navbar } from 'flowbite-react'
 import { Button } from 'flowbite-react'
 import type { CustomFlowbiteTheme } from 'flowbite-react'
+import { Popup } from './Popup'
+import ContactUsSection from './ContactUsSection'
+import { useState } from 'react'
 
 const customTheme: CustomFlowbiteTheme['navbar'] = {
     collapse: {
@@ -15,7 +18,13 @@ const customTheme: CustomFlowbiteTheme['navbar'] = {
 }
 
 export function Nav() {
+		const [popupOpen, setPopupOpen] = useState(false);
+		const togglePopup = () => {
+			setPopupOpen(!popupOpen);
+		}
+
     return (
+			<>
         <Navbar fluid rounded theme={customTheme}>
             <Navbar.Brand as={Link} href="https://flowbite-react.com">
                 <span className="self-center whitespace-nowrap text-xl font-semibold text-black">
@@ -33,18 +42,17 @@ export function Nav() {
                 <Navbar.Link as={Link} href="/team">
                     Nasz Zespół
                 </Navbar.Link>
-                <Navbar.Link as={Link} href="/blog">
-                    Blog
-                </Navbar.Link>
                 <Navbar.Link as={Link} href="/contact">
                     Kontakt
                 </Navbar.Link>
-                <Navbar.Link as={Link} href="/pricing">
-                    <button className="rounded-xl border-2 border-black px-6 py-3 font-bold">
-                        Bezpłatna wycena
-                    </button>
-                </Navbar.Link>
+                <button className="rounded-xl border-2 border-black px-6 py-3 font-bold" onClick={togglePopup}>
+										Bezpłatna wycena
+								</button>
             </Navbar.Collapse>
         </Navbar>
+				<Popup isOpen={popupOpen} togglePopup={togglePopup}>
+					<ContactUsSection />
+				</Popup>
+			</>
     )
 }
