@@ -54,10 +54,10 @@ export default function Home() {
                     text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque."
                 ></ServiceTile>
             </div>
-            <div className="flex w-full gap-8 text-6xl font-bold">
+            <div className="flex w-full gap-8 text-3xl md:text-6xl font-bold">
                 Kilka naszych projektów
             </div>
-            <div className="grid w-full grid-cols-2 gap-8 pb-32 pt-8">
+            <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-8 pb-16 md:pb-32 pt-8">
                 <ProjectTile
                     title="Projekt #1"
                     text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque"
@@ -75,15 +75,15 @@ export default function Home() {
                     text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque"
                 ></ProjectTile>
             </div>
-            <div className="flex justify-center pb-16">
-                <button className="rounded-xl bg-primary px-8 py-4 text-2xl font-bold text-white">
+            <div className="flex justify-center pb-8 md:pb-16">
+                <button className="rounded-xl bg-primary px-4 md:px-8 py-4 text-1xl md:text-2xl font-bold text-white">
                     Zobacz wszystkie projekty
                 </button>
             </div>
-            <div className="flex w-full gap-8 text-6xl font-bold">
+            <div className="flex w-full gap-4 md:gap-8 text-3xl md:text-6xl font-bold">
                 Nasz wyjątkowy zespół
             </div>
-            <div className="my-7 flex w-full gap-7 pb-32 pt-8">
+            <div className="my-0 md:my-7 flex flex-col md:flex-row w-full gap-7 pb-32 pt-8">
                 <PersonTile
                     title="Astoria Bublas"
                     text="Lorem ipsum dolor sit amet facere et consectetur adipisicing elit. Quisis cupiditate facere seq exercitationem."
@@ -97,10 +97,10 @@ export default function Home() {
                     text="Lorem ipsum dolor sit amet facere et consectetur adipisicing elit. Quisis cupiditate facere seq exercitationem."
                 ></PersonTile>
             </div>
-            <div className="flex w-full gap-8 text-6xl font-bold">
+            <div className="flex w-full gap-8 text-3xl md:text-6xl font-bold">
                 Aktualności
             </div>
-            <div className="grid w-full grid-cols-2 gap-8 pb-32 pt-8">
+            <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-8 pb-32 pt-8">
                 <ArticleTile
                     title="Artykuł #1"
                     text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque"
@@ -111,7 +111,7 @@ export default function Home() {
                 ></ArticleTile>
             </div>
             <div className="flex justify-center pb-16">
-                <button className="rounded-xl bg-primary px-8 py-4 text-2xl font-bold text-white">
+                <button className="rounded-xl bg-primary px-8 py-4 text-1xl md:text-2xl font-bold text-white">
                     Przejdź do naszego bloga
                 </button>
             </div>
