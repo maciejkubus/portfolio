@@ -33,9 +33,6 @@ export function Nav() {
                 <Navbar.Link as={Link} href="/team">
                     Nasz Zespół
                 </Navbar.Link>
-                <Navbar.Link as={Link} href="/blog">
-                    Blog
-                </Navbar.Link>
                 <Navbar.Link as={Link} href="/contact">
                     Kontakt
                 </Navbar.Link>
