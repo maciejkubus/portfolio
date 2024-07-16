@@ -8,7 +8,7 @@ import Image from 'next/image'
 export default function Home() {
     return (
         <main className="container mx-auto px-2 md:px-8 xl:px-12">
-            <div className="flex w-full gap-8 py-16 md:py-32 flex-col md:flex-row">
+            <div className="flex w-full gap-16 py-16 md:py-32 flex-col md:flex-row">
                 <div className="w-full md:w-1/2">
                     <h1 className="text-3xl md:text-6xl font-bold leading-normal">
                         Zbudujemy razem
@@ -17,10 +17,7 @@ export default function Home() {
                         <br />w internecie
                     </h1>
                     <p className="my-8 text-xl">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quis cupiditate facere sequi hic exercitationem nisi
-                        rem, tempora accusamus aliquid, mollitia suscipit minima
-                        neque.
+                        Jesteśmy młodą załogą, która pomoże ci zbudować Twój wizerunek w sieci. Przyniesiemy twojej firmie kreatywne i nieszablonowe pomysły. Czekamy na Ciebie!
                     </p>
                     <div className="flex gap-8">
                         <button className="rounded-xl bg-primary px-6 py-3 font-bold text-white">
@@ -40,18 +37,18 @@ export default function Home() {
                     ></Image>
                 </div>
             </div>
-            <div className="flex flex-col md:flex-row w-full gap-8 py-32">
+            <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-8 py-32">
                 <ServiceTile
                     title="Strony internetowe"
-                    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque."
+                    text="Tworzymy strony dopasowane do Twoich potrzeb. Wizerunek w sieci jest istotnym elementem prezentacji Twojej firmy."
                 ></ServiceTile>
                 <ServiceTile
                     title="E-commerce"
-                    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque."
+                    text="Pomożemy Ci sprzedać Twoje produkty w internecie. Nasze sklepy są łatwe w obsłudze."
                 ></ServiceTile>
                 <ServiceTile
                     title="Web Development"
-                    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque."
+                    text="Jesteśmy Ci w stanie zaproponować inne usługi z zakresu obsługi systemów informatycznych."
                 ></ServiceTile>
             </div>
             <div className="flex w-full gap-8 text-3xl md:text-6xl font-bold">

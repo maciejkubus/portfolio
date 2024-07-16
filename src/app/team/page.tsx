@@ -18,7 +18,7 @@ export default function Team() {
               neque.
           </p>
       </div>
-      <div className="hidden md:w-1/2">
+      <div className="hidden md:flex md:w-1/2">
           <Image
               src="team.svg"
               alt="computer"

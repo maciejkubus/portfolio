@@ -28,7 +28,7 @@ export function Nav() {
         <Navbar fluid rounded theme={customTheme}>
             <Navbar.Brand as={Link} href="https://flowbite-react.com">
                 <span className="self-center whitespace-nowrap text-xl font-semibold text-black">
-                    Astoria Star
+                    GenZ Coding
                 </span>
             </Navbar.Brand>
             <Navbar.Toggle />
