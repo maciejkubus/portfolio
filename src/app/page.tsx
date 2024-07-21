@@ -94,11 +94,6 @@ export default function Home() {
                     text="Lorem ipsum dolor sit amet facere et consectetur adipisicing elit. Quisis cupiditate facere seq exercitationem."
                 ></PersonTile>
             </div>
-            <div className="flex justify-center pb-16">
-                <button className="text-1xl rounded-xl bg-primary px-8 py-4 font-bold text-white md:text-2xl">
-                    Przejdź do naszego bloga
-                </button>
-            </div>
             <ContactUsSection />
         </main>
     )
