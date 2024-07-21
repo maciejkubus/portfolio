@@ -94,19 +94,6 @@ export default function Home() {
                     text="Lorem ipsum dolor sit amet facere et consectetur adipisicing elit. Quisis cupiditate facere seq exercitationem."
                 ></PersonTile>
             </div>
-            <div className="flex w-full gap-8 text-3xl font-bold md:text-6xl">
-                Aktualności
-            </div>
-            <div className="grid w-full grid-cols-1 gap-8 pb-32 pt-8 md:grid-cols-2">
-                <ArticleTile
-                    title="Artykuł #1"
-                    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque"
-                ></ArticleTile>
-                <ArticleTile
-                    title="Artykuł #2"
-                    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate facere sequi hic exercitationem nisi rem, tempora accusamus aliquid, mollitia suscipit minima neque"
-                ></ArticleTile>
-            </div>
             <div className="flex justify-center pb-16">
                 <button className="text-1xl rounded-xl bg-primary px-8 py-4 font-bold text-white md:text-2xl">
                     Przejdź do naszego bloga
