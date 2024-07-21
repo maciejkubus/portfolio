@@ -11,12 +11,7 @@ const ContactUsSection = () => {
                         Odezwij się do nas
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Curabitur elementum, felis ac elementum efficitur,
-                        sapien tellus eleifend enim, quis consequat lorem metus
-                        nec tortor. Morbi eu sem in quam cursus sodales. Donec
-                        commodo felis ac elit porta malesuada. Aenean vel
-                        dignissim erat, vitae auctor quam.
+											Chętnie odpowiemy na wszystkie Twoje pytania i wątpliwości. Skontaktuj się z nami, korzystając z formularza obok lub bezpośrednio wysyłając e-mail na nasz adres. Odpowiemy na Twoją wiadomość najszybciej jak to możliwe.
                     </p>
                     <div className="grid w-full grid-cols-2 gap-2 pb-32 pt-8">
                         <div className="flex items-center">
