@@ -21,6 +21,12 @@ export function Nav() {
 		const [popupOpen, setPopupOpen] = useState(false);
 		const togglePopup = () => {
 			setPopupOpen(!popupOpen);
+
+			if(popupOpen) {
+				document.body.style.overflowY = "auto"
+			} else {
+				document.body.style.overflowY = "hidden"
+			}
 		}
 
     return (
