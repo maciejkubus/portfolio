@@ -5,8 +5,8 @@ import ContactUsSection from '@/components/ContactUsSection'
 const Contact = () => {
     return (
         <main className="container mx-auto px-2 md:px-8 xl:px-12">
-            <div className="flex w-full gap-8 py-32">
-                <div className="w-1/2 pr-6">
+            <div className="flex w-full flex-wrap gap-8 py-32">
+                <div className="w-full pr-6 lg:w-1/2">
                     <h1 className="text-6xl font-bold leading-normal">
                         Nie wstydź się i skontaktuj się z nami
                     </h1>
@@ -17,7 +17,7 @@ const Contact = () => {
                         neque.
                     </p>
                 </div>
-                <div className="w-1/2">
+                <div className="w-full lg:w-1/2">
                     <Image
                         src="contact.svg"
                         alt="contact us"

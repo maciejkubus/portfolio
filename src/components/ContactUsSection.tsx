@@ -5,7 +5,7 @@ import ContactForm from './ContactForm'
 const ContactUsSection = () => {
     return (
         <div>
-            <div className="grid w-full grid-cols-2 gap-8 pb-32 pt-8">
+            <div className="grid w-full grid-cols-1 gap-8 pb-32 pt-8 lg:grid-cols-2">
                 <div>
                     <h3 className="mb-8 flex w-full gap-8 text-6xl font-bold">
                         Odezwij się do nas
