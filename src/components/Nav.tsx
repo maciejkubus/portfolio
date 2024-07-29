@@ -18,41 +18,49 @@ const customTheme: CustomFlowbiteTheme['navbar'] = {
 }
 
 export function Nav() {
-		const [popupOpen, setPopupOpen] = useState(false);
-		const togglePopup = () => {
-			setPopupOpen(!popupOpen);
-		}
+    const [popupOpen, setPopupOpen] = useState(false)
+    const togglePopup = () => {
+        setPopupOpen(!popupOpen)
+    }
 
     return (
-			<>
-        <Navbar fluid rounded theme={customTheme}>
-            <Navbar.Brand as={Link} href="https://flowbite-react.com">
-                <span className="self-center whitespace-nowrap text-xl font-semibold text-black">
-                    Astoria Star
-                </span>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-            <Navbar.Collapse>
-                <Navbar.Link as={Link} href="/">
-                    Strona Główna
-                </Navbar.Link>
-                <Navbar.Link as={Link} href="/portfolio">
-                    Nasze Portfolio
-                </Navbar.Link>
-                <Navbar.Link as={Link} href="/team">
-                    Nasz Zespół
-                </Navbar.Link>
-                <Navbar.Link as={Link} href="/contact">
-                    Kontakt
-                </Navbar.Link>
-                <button className="rounded-xl border-2 border-black px-6 py-3 font-bold" onClick={togglePopup}>
-										Bezpłatna wycena
-								</button>
-            </Navbar.Collapse>
-        </Navbar>
-				<Popup isOpen={popupOpen} togglePopup={togglePopup}>
-					<ContactUsSection />
-				</Popup>
-			</>
+        <div className="w-full">
+            <Navbar
+                fluid
+                rounded
+                theme={customTheme}
+                className="fixed left-0 right-0"
+            >
+                <Navbar.Brand as={Link} href="https://flowbite-react.com">
+                    <span className="self-center whitespace-nowrap text-xl font-semibold text-black">
+                        Astoria Star
+                    </span>
+                </Navbar.Brand>
+                <Navbar.Toggle />
+                <Navbar.Collapse>
+                    <Navbar.Link as={Link} href="/">
+                        Strona Główna
+                    </Navbar.Link>
+                    <Navbar.Link as={Link} href="/portfolio">
+                        Nasze Portfolio
+                    </Navbar.Link>
+                    <Navbar.Link as={Link} href="/team">
+                        Nasz Zespół
+                    </Navbar.Link>
+                    <Navbar.Link as={Link} href="/contact">
+                        Kontakt
+                    </Navbar.Link>
+                    <button
+                        className="rounded-xl border-2 border-black px-6 py-3 font-bold"
+                        onClick={togglePopup}
+                    >
+                        Bezpłatna wycena
+                    </button>
+                </Navbar.Collapse>
+            </Navbar>
+            <Popup isOpen={popupOpen} togglePopup={togglePopup}>
+                <ContactUsSection />
+            </Popup>
+        </div>
     )
 }
